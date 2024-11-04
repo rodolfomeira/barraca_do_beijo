@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+		<head>
+			<meta charset="utf-8">
+			<title>Adivinhação</title>
+		
+		</head>
+		<body background="barraca-beijo.jpg" text="white">
+		
+		 <marquee direction="up"><h1 align="center">Arraiar do Liceu Pedro II
+		 </h1></marquee></br></br></br></br></br></br>
+         <marquee direction="down"><h1 align="center" >F5 para jogar de novo !!!
+		 </h1></marquee></br></br></br></br></br></br>
+					<script>
+							var num2 = Math.floor(Math.random() * 11), // numero sorteado
+								num=0;
+								tentativas=0; 
+								// num e numero informado, tentantivas é numero de tentativas
+                                sexo=prompt("[1] - Masculino  [2] - Feminino")
+							function checaNumero() {
+							  
+								
+								num = prompt("Entre com o numero de 0 á 10  para ver quem vai te beijar na famosa barraca do beijo");
+								
+								// Usuário cancelou o quiz
+								if(num == null) return false;
+								if(num < 0)
+								{
+								  alert('Não coloque números Negativos');
+									
+								}
+								
+								
+								
+								// Usuário não informou um número
+								if(parseInt(num).toString()=='NaN') {
+									alert('Oia !!!! Que tar digitar um número válido');
+									checaNumero();
+									return false;
+								}
+								
+								tentativas=tentativas+1; // Incrementa as tentativas  tentativas++
+
+								if(parseInt(num) == num2){ // Acertou
+									alert("Parabéns  ocê acertou em " + tentativas + " tentativa(s). Então óia só quem vai beijar !!!");
+									 var imagem = Math.floor(Math.random() * 4)
+									if(sexo==2) {
+									   if( imagem==0)
+									   {
+									     document.write('<center><img src="Meninocaipira1.jpg"</center>');
+									   }
+									   if( imagem==1)
+									   {  
+									     document.write('<center><img src="MeninoCaipira2.jpg"</center>');
+									   
+									   } 
+									   if( imagem==2) 
+									   {  
+									     document.write('<center><img src="MeninoCaipira3.jpg" </center>');
+									   
+									   } 
+									   if( imagem==3) 
+									   {  
+									     document.write('<center><img src="Garotocaipira1.jpg"</center>');
+									   
+									   }
+									   if( imagem==4) 
+									     {  
+									     document.write('<center><img src="Garotocaipira2.jpg"</center>');
+									   
+									   }
+									} else if(sexo==1)
+									{
+									   
+									   if( imagem==0) 
+									   {
+									     document.write('<center><img src="Meninacaipira1.jpg"</center>');
+									   }
+									   if( imagem==1)
+									   {
+									     document.write('<center><img src="Meninacaipira2.jpg"</center>');
+									   }
+									   if( imagem==2) 
+									   {
+									     document.write('<center><img src="Meninacaipira3.jpg"</center>');
+									   }
+									   if( imagem==3) 
+									   {
+									     document.write('<center><img src="Meninacaipira4.jpg"</center>');
+									   }
+									   if( imagem==4)
+									   {
+									     document.write('<center><img src="Meninacaipira5.jpg"</center>');
+									   }
+									   
+									}
+									 else 
+									 {
+									 
+									 alert("Vichi !!! Vi que Ocê num escoieu direito !!!, pois não escoieu home nem muié, então oia que tenho pro cê!!!" 
+									 )
+									 document.write('<center><img src="mulhercaipira1.jpg" width="200" height="200"');
+									 document.write('<center><img src="caipira1.jpg" width="200" height="200"</center>');
+									 
+									 }
+									
+								}
+								else if(parseInt(num) < num2){ // Errou número menor
+									alert("Chiii , ocê errou,que tar  tentarrrr um número MAIORRRRR.");
+									checaNumero();
+								}
+								else{ //Errou número maior
+									alert("Errou, Chiii !!!! tente outro numero , ocê errou,que tar  tentarrrr um número MENORRRRR.");
+									checaNumero();
+								}   
+							}
+
+								checaNumero()
+					</script>
+		 
+	 
+		</body>
+		
+</html>
